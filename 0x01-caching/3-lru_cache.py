@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Last-In First-Out caching module.
+"""Least-Recently -Used caching module.
 """
 from base_caching import BaseCaching
 
