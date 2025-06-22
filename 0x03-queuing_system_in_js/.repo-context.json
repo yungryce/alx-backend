@@ -1,0 +1,94 @@
+{
+  "project_identity": {
+    "name": "0x03-queuing_system_in_js",
+    "type": "education",
+    "scope": "Queuing systems, job queues, Node.js, Redis, publish/subscribe, asynchronous processing",
+    "is_independent": false,
+    "version": null,
+    "related_versions": null,
+    "description": "This project introduces and implements queuing systems in backend applications, focusing on job queues, workers, and real-time notifications using Node.js and Redis."
+  },
+  "tech_stack": {
+    "primary": ["Node.js"],
+    "secondary": ["Redis"],
+    "key_libraries": ["redis", "mocha"]
+  },
+  "skill_manifest": {
+    "technical": [
+      "Queuing systems",
+      "Job queue implementation",
+      "Node.js backend development",
+      "Redis operations",
+      "Publish/subscribe pattern",
+      "Asynchronous processing"
+    ],
+    "domain": [
+      "Backend engineering",
+      "Real-time systems"
+    ]
+  },
+  "components": {
+    "redis_client": {
+      "type": "module",
+      "path": "0-redis_client.js",
+      "description": "Basic Redis client setup."
+    },
+    "redis_operations": {
+      "type": "module",
+      "path": "1-redis_op.js, 2-redis_op_async.js, 4-redis_advanced_op.js",
+      "description": "Synchronous, asynchronous, and advanced Redis operations."
+    },
+    "pubsub": {
+      "type": "module",
+      "path": "5-publisher.js, 5-subscriber.js",
+      "description": "Publish/subscribe example."
+    },
+    "job_queue": {
+      "type": "module",
+      "path": "6-job_creator.js, 6-job_processor.js, 7-job_creator.js, 7-job_processor.js, 8-job.js, 8-job.test.js",
+      "description": "Job queue, worker, and tests."
+    },
+    "stock_management": {
+      "type": "module",
+      "path": "9-stock.js",
+      "description": "Stock management with queues."
+    }
+  },
+  "progression": null,
+  "topics": [
+    "queuing systems",
+    "job queues",
+    "node.js",
+    "redis",
+    "publish/subscribe",
+    "asynchronous processing"
+  ],
+  "skillLevel": "intermediate",
+  "projectStructure": null,
+  "outcomes": {
+    "technicalSkills": [
+      "Implementing job queues in Node.js",
+      "Using Redis for backend operations",
+      "Handling asynchronous job processing"
+    ],
+    "softSkills": [
+      "Problem solving",
+      "Debugging distributed systems"
+    ]
+  },
+  "prerequisites": [
+    "Basic JavaScript programming",
+    "Intro to Node.js and Redis"
+  ],
+  "associatedProjects": {
+    "previous": "0x02-i18n",
+    "next": null,
+    "related": null
+  },
+  "files": {
+    "readme_file": "README.md",
+    "requirements_file": "package.json",
+    "authors_file": null,
+    "license_file": null
+  }
+}

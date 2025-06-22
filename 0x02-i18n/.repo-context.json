@@ -1,0 +1,87 @@
+{
+  "project_identity": {
+    "name": "0x02-i18n",
+    "type": "education",
+    "scope": "Internationalization, localization, multilingual backend, Flask, Babel",
+    "is_independent": false,
+    "version": null,
+    "related_versions": null,
+    "description": "This project introduces and implements internationalization (i18n) in backend web applications, focusing on language selection, translation management, and locale-aware responses using Python and Flask."
+  },
+  "tech_stack": {
+    "primary": ["Python"],
+    "secondary": ["Flask", "Babel"],
+    "key_libraries": ["flask_babel", "jinja2"]
+  },
+  "skill_manifest": {
+    "technical": [
+      "Internationalization (i18n)",
+      "Localization (l10n)",
+      "Flask web development",
+      "Translation management",
+      "Template rendering"
+    ],
+    "domain": [
+      "Web development",
+      "User experience"
+    ]
+  },
+  "components": {
+    "flask_app": {
+      "type": "application",
+      "path": "app.py",
+      "description": "Flask application demonstrating i18n features."
+    },
+    "babel_config": {
+      "type": "config",
+      "path": "babel.cfg",
+      "description": "Babel configuration for message extraction."
+    },
+    "translations": {
+      "type": "directory",
+      "path": "translations/",
+      "description": "Language-specific message catalogs."
+    },
+    "templates": {
+      "type": "directory",
+      "path": "templates/",
+      "description": "Jinja2 HTML templates for different locales."
+    }
+  },
+  "progression": null,
+  "topics": [
+    "internationalization",
+    "localization",
+    "multilingual",
+    "flask",
+    "babel"
+  ],
+  "skillLevel": "intermediate",
+  "projectStructure": null,
+  "outcomes": {
+    "technicalSkills": [
+      "Implementing i18n in Flask",
+      "Managing translation files",
+      "Locale-aware template rendering"
+    ],
+    "softSkills": [
+      "Attention to user diversity",
+      "Problem solving"
+    ]
+  },
+  "prerequisites": [
+    "Basic Python programming",
+    "Intro to Flask web development"
+  ],
+  "associatedProjects": {
+    "previous": "0x01-caching",
+    "next": null,
+    "related": null
+  },
+  "files": {
+    "readme_file": "README.md",
+    "requirements_file": "requirements.txt",
+    "authors_file": null,
+    "license_file": null
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "project_identity": {
+    "name": "0x01-caching",
+    "type": "education",
+    "scope": "Cache replacement policies, backend optimization, memory management",
+    "is_independent": false,
+    "version": null,
+    "related_versions": null,
+    "description": "This project explores and implements core caching strategies and replacement policies for backend systems, focusing on extensible Python classes and algorithmic trade-offs."
+  },
+  "tech_stack": {
+    "primary": ["Python"],
+    "secondary": [],
+    "key_libraries": ["abc", "collections"]
+  },
+  "skill_manifest": {
+    "technical": [
+      "Cache algorithm implementation",
+      "Object-oriented design",
+      "Testing and validation",
+      "Algorithmic analysis"
+    ],
+    "domain": [
+      "Backend engineering",
+      "System optimization"
+    ]
+  },
+  "components": {
+    "base_caching": {
+      "type": "abstract class",
+      "path": "base_caching.py",
+      "description": "Defines the interface and shared logic for all cache classes."
+    },
+    "fifo_cache": {
+      "type": "concrete class",
+      "path": "1-fifo_cache.py",
+      "description": "Implements FIFO cache replacement policy."
+    },
+    "lifo_cache": {
+      "type": "concrete class",
+      "path": "2-lifo_cache.py",
+      "description": "Implements LIFO cache replacement policy."
+    },
+    "lru_cache": {
+      "type": "concrete class",
+      "path": "3-lru_cache.py",
+      "description": "Implements LRU cache replacement policy."
+    },
+    "mru_cache": {
+      "type": "concrete class",
+      "path": "4-mru_cache.py",
+      "description": "Implements MRU cache replacement policy."
+    },
+    "lfu_cache": {
+      "type": "concrete class",
+      "path": "100-lfu_cache.py",
+      "description": "Implements LFU cache replacement policy."
+    }
+  },
+  "progression": null,
+  "topics": [
+    "caching",
+    "cache replacement",
+    "backend optimization",
+    "memory management"
+  ],
+  "skillLevel": "intermediate",
+  "projectStructure": null,
+  "outcomes": {
+    "technicalSkills": [
+      "Implementing cache classes",
+      "Evaluating algorithmic trade-offs",
+      "Testing cache behavior"
+    ],
+    "softSkills": [
+      "Analytical thinking",
+      "Attention to detail"
+    ]
+  },
+  "prerequisites": [
+    "Basic Python programming",
+    "Intro to object-oriented programming"
+  ],
+  "associatedProjects": {
+    "previous": "0x00-pagination",
+    "next": null,
+    "related": null
+  },
+  "files": {
+    "readme_file": "README.md",
+    "requirements_file": null,
+    "authors_file": null,
+    "license_file": null
+  }
+}
