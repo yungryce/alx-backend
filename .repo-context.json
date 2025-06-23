@@ -1,87 +1,262 @@
 {
   "project_identity": {
     "name": "alx-backend",
-    "type": "education",
-    "scope": null,
-    "is_independent": null,
-    "version": null,
-    "related_versions": null,
-    "description": "Container project for ALX backend engineering modules, covering core backend concepts such as pagination, caching, internationalization (i18n), and queueing systems. Each nested project is self-contained and demonstrates a specific backend skill."
+    "type": "educational",
+    "scope": "backend",
+    "is_independent": true,
+    "version": "1.0.0",
+    "related_versions": [],
+    "description": "Comprehensive ALX backend engineering curriculum covering advanced backend concepts including pagination, caching algorithms, internationalization, and asynchronous queue systems. This repository serves as a complete learning path for modern backend development practices.",
+    "curriculum_stage": "specialization"
   },
   "tech_stack": {
     "primary": [
       "Python 3.x",
       "JavaScript (Node.js)",
       "Flask",
-      "Babel",
       "Redis"
     ],
     "secondary": [
+      "Babel",
       "CSV",
-      "JSON",
-      "unittest",
-      "Linux tools"
+      "JSON"
     ],
-    "key_libraries": null
+    "key_libraries": [
+      "Flask-Babel",
+      "redis-py",
+      "node_redis",
+      "kue"
+    ],
+    "development_tools": [
+      "pytest",
+      "unittest",
+      "eslint",
+      "pylint"
+    ],
+    "testing_frameworks": [
+      "unittest",
+      "pytest",
+      "mocha"
+    ]
   },
   "skill_manifest": {
     "technical": [
       "RESTful API design and implementation",
-      "Efficient data handling and transformation",
-      "Backend performance optimization",
-      "Asynchronous programming and job queue management",
+      "Advanced data pagination strategies",
+      "Caching algorithm implementation (FIFO, LIFO, LRU, MRU, LFU)",
       "Internationalization and localization",
-      "Modular, scalable backend architecture"
+      "Asynchronous programming and job queue management",
+      "Performance optimization techniques",
+      "Backend architecture design"
     ],
     "domain": [
-      "backend engineering",
-      "pagination",
-      "caching",
-      "internationalization",
-      "i18n",
-      "queueing",
-      "asynchronous processing",
-      "performance optimization",
-      "modular architecture"
+      "Backend Engineering",
+      "Web API Development",
+      "System Performance Optimization",
+      "Global Application Development",
+      "Distributed Systems",
+      "Data Management"
+    ],
+    "professional": [
+      "Technical documentation",
+      "Code organization and modularity",
+      "Problem-solving methodologies",
+      "System design thinking"
+    ],
+    "competency_level": "intermediate"
+  },
+  "components": {
+    "pagination_module": {
+      "type": "module",
+      "path": "./0x00-pagination",
+      "description": "Advanced pagination techniques and hypermedia API design",
+      "dependencies": ["flask", "csv"],
+      "interfaces": ["simple_pagination", "hypermedia_pagination", "deletion_resilient_pagination"]
+    },
+    "caching_module": {
+      "type": "module", 
+      "path": "./0x01-caching",
+      "description": "Implementation of various caching algorithms and strategies",
+      "dependencies": ["base_caching"],
+      "interfaces": ["BasicCache", "FIFOCache", "LIFOCache", "LRUCache", "MRUCache", "LFUCache"]
+    },
+    "i18n_module": {
+      "type": "module",
+      "path": "./0x02-i18n", 
+      "description": "Internationalization and localization implementation",
+      "dependencies": ["flask", "flask-babel"],
+      "interfaces": ["babel_config", "locale_detection", "timezone_handling"]
+    },
+    "queuing_module": {
+      "type": "module",
+      "path": "./0x03-queuing_system_in_js",
+      "description": "Asynchronous job processing and queue management system",
+      "dependencies": ["redis", "kue"],
+      "interfaces": ["redis_client", "job_processor", "queue_manager"]
+    }
+  },
+  "progression": {
+    "stage_1": {
+      "description": "Data handling and pagination fundamentals",
+      "tech_stack": ["Python", "Flask", "CSV"],
+      "features": ["Simple pagination", "Hypermedia pagination", "Deletion-resilient pagination"],
+      "skills": ["API design", "Data chunking", "HATEOAS principles"],
+      "duration": "1-2 weeks"
+    },
+    "stage_2": {
+      "description": "Performance optimization through caching",
+      "tech_stack": ["Python", "OOP"],
+      "features": ["FIFO cache", "LIFO cache", "LRU cache", "MRU cache", "LFU cache"],
+      "skills": ["Algorithm implementation", "Memory management", "Performance optimization"],
+      "duration": "1-2 weeks"
+    },
+    "stage_3": {
+      "description": "Global application development",
+      "tech_stack": ["Python", "Flask", "Babel"],
+      "features": ["Multi-language support", "Locale detection", "Timezone handling"],
+      "skills": ["Internationalization", "Localization", "User experience design"],
+      "duration": "1-2 weeks"
+    },
+    "stage_4": {
+      "description": "Asynchronous systems and queue management",
+      "tech_stack": ["Node.js", "Redis", "Kue"],
+      "features": ["Job queuing", "Background processing", "Pub/Sub messaging"],
+      "skills": ["Asynchronous programming", "Distributed systems", "Message queuing"],
+      "duration": "1-2 weeks"
+    }
+  },
+  "topics": [
+    "Backend Engineering",
+    "API Pagination",
+    "Caching Algorithms",
+    "Internationalization",
+    "Asynchronous Processing",
+    "Performance Optimization",
+    "System Architecture",
+    "Data Management"
+  ],
+  "skillLevel": "intermediate",
+  "projectStructure": {
+    "architecture_pattern": "modular",
+    "directory_structure": {
+      "0x00-pagination": "Data pagination and hypermedia API design",
+      "0x01-caching": "Caching algorithm implementations",
+      "0x02-i18n": "Internationalization and localization",
+      "0x03-queuing_system_in_js": "Asynchronous job processing"
+    },
+    "key_files": [
+      {"path": "requirements.txt", "purpose": "Python dependencies specification"},
+      {"path": "README.md", "purpose": "Repository overview and setup guide"},
+      {"path": "SKILLS-INDEX.md", "purpose": "Comprehensive skills catalog"},
+      {"path": "ARCHITECTURE.md", "purpose": "System architecture documentation"}
     ]
   },
-  "components": null,
-  "progression": null,
-  "topics": [
-    "backend engineering",
-    "pagination",
-    "caching",
-    "internationalization",
-    "i18n",
-    "queueing",
-    "asynchronous processing",
-    "REST API",
-    "performance optimization",
-    "modular architecture"
-  ],
-  "skillLevel": "intermediate-to-advanced",
-  "projectStructure": null,
   "outcomes": {
     "technicalSkills": [
-      "API design",
-      "Data handling",
-      "Performance optimization",
-      "Asynchronous programming",
-      "Internationalization",
-      "Modular architecture"
+      "Advanced API design and implementation",
+      "Performance optimization through caching",
+      "Global application development",
+      "Asynchronous system architecture",
+      "Data management and processing",
+      "Backend security best practices"
     ],
     "softSkills": [
-      "Documentation",
-      "Code organization",
-      "Problem-solving"
+      "System design thinking",
+      "Technical documentation",
+      "Code organization and modularity",
+      "Problem-solving methodologies"
+    ],
+    "career_preparation": [
+      "Backend Engineer",
+      "API Developer", 
+      "Performance Engineer",
+      "Systems Architect",
+      "Global Product Developer"
+    ],
+    "certifications": [
+      "Backend development specialization",
+      "System design preparation",
+      "Performance optimization expertise"
     ]
   },
-  "prerequisites": null,
-  "associatedProjects": null,
+  "prerequisites": [
+    "Python programming fundamentals",
+    "Basic web development concepts",
+    "Understanding of HTTP protocols",
+    "Command line proficiency",
+    "Git version control"
+  ],
+  "associatedProjects": {
+    "previous": "alx-higher_level_programming",
+    "next": "alx-backend-javascript",
+    "related": [
+      "alx-backend-python",
+      "alx-backend-user-data"
+    ],
+    "dependencies": [
+      "Python fundamentals",
+      "Web development basics"
+    ],
+    "enables": [
+      "Advanced backend specialization",
+      "Full-stack development",
+      "System architecture design"
+    ]
+  },
   "files": {
     "authors_file": "./AUTHORS",
-    "license_file": "./LICENSE",
+    "license_file": "./LICENSE.txt", 
     "readme_file": "./README.md",
-    "requirements_file": "./requirements.txt"
+    "requirements_file": "./requirements.txt",
+    "documentation_files": [
+      "./SKILLS-INDEX.md",
+      "./ARCHITECTURE.md"
+    ],
+    "test_files": [
+      "./0x00-pagination/*-main.py",
+      "./0x01-caching/*-main.py"
+    ]
+  },
+  "assessment": {
+    "evaluation_criteria": [
+      "Code functionality and correctness",
+      "Performance optimization implementation",
+      "Documentation quality and completeness",
+      "Architecture design and modularity",
+      "Best practices adherence"
+    ],
+    "deliverables": [
+      "Working pagination implementation",
+      "Caching algorithm implementations", 
+      "Internationalization system",
+      "Queue management system",
+      "Comprehensive documentation"
+    ],
+    "grading_rubric": {
+      "functionality": "40%",
+      "performance": "25%", 
+      "documentation": "20%",
+      "code_quality": "15%"
+    },
+    "peer_review": false
+  },
+  "metadata": {
+    "created_date": "2024-01-15",
+    "last_updated": "2025-06-22",
+    "contributors": [
+      "Chigbu Joshua"
+    ],
+    "tags": [
+      "backend",
+      "python",
+      "javascript", 
+      "pagination",
+      "caching",
+      "i18n",
+      "queuing",
+      "performance"
+    ],
+    "difficulty_rating": 7,
+    "estimated_hours": 160
   }
 }
